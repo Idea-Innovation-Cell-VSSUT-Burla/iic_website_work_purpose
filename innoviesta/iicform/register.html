@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="contact form example">
+    <link rel="shortcut icon" href="https://iic-vssut.org/innoviesta/img/orientation.jpeg">
+  <meta property="og:image" content="https://iic-vssut.org/innoviesta/img/orientation.jpeg">
+<link href="https://iic-vssut.org/innoviesta/img/orientation.jpeg" rel="icon">
+  <link href="https://iic-vssut.org/innoviesta/img/orientation.jpeg" rel="apple-touch-icon">
+
+  <title>INNOVIESTA - Register</title>
+    <style>
+        body {
+            background: linear-gradient(rgba(2, 2, 2, .5), rgba(0, 0, 0, .5)),url("background.jpeg");
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+        }
+        #branches {
+            color: #000;
+        }
+        label,h2 {
+            font-weight: 700;
+            color: aliceblue;
+        }
+        @media(max-width:800px)
+        {
+            body {
+                background: linear-gradient(rgba(2, 2, 2, .5), rgba(0, 0, 0, .5)),url("background-mob.jpeg");
+                background-size: cover;
+                margin: 0;
+                padding: 0;
+            }
+        }
+        .loader {
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 90px;
+  height: 90px;
+  animation: spin 2s linear infinite;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+a:link {
+    color:aqua;
+}
+
+    </style>
+</head>
+
+<body>
+  <h2 class="content-head is-center">Contact Us!</h2>
+  <aside id="aside">
+       <p>
+           Hey there! </p>
+           <p>You can register for the Idea Innovation Club orientation here.
+       </p>
+   </aside>
+
+<!-- START HERE -->
+   <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+   <!-- Style The Contact Form How Ever You Prefer -->
+   <link rel="stylesheet" href="style.css">
+ 
+<!-- Loader -->
+   <div id="theloader" class="loader" style="display: none"></div>
+    
+<div class="container">
+<div class="row">
+  <form class="gform pure-form pure-form-stacked" method="POST" data-email=""
+  action="https://script.google.com/macros/s/AKfycbxbGnAUMirWPTQhTHzrO3X_MAZhFQFeyMzBmRspNwEdhp3dOhfQP-Qj3Q/exec">
+    <!-- change the form action to your script url -->
+
+    <div class="form-elements" style="margin-bottom: 15px">
+      <fieldset class="pure-group">
+        <label for="name">Name: </label>
+        <input id="name" name="name" required placeholder="Your name" />
+      </fieldset>
+        
+      <fieldset class="pure-group">
+        <label for="email">Email Address:</label>
+        <input id="email" name="email" type="email" value=""
+        required placeholder="your.name@email.com" data-rule="email" data-msg="Please enter a valid email"  />
+        <div class="validate"></div>
+      </fieldset>
+
+      <fieldset class="pure-group">
+        <label for="message">Phone number: </label>
+        <input type="number" id="message" name="phone"
+        required placeholder="Your phone number">
+      </fieldset>
+        
+      <fieldset class="pure-group">
+        <label for="message">Branch: </label>
+        <select id = "branches" name="branch" required>
+               <option value = "0" >Select your Branch</option>
+               <option value = "chemical">Chemical Engineering</option>
+               <option value = "civil">Civil Engineering</option>
+               <option value = "CSE">Computer Science &amp; Engineering</option>
+               <option value = "Electrical">Electrical Engineering</option>
+               <option value = "EEE">Electrical &amp; Electronics Engineering</option>
+               <option value = "ETC">Electronics &amp; Telecommunication Engineering</option>
+               <option value = "IT">Information Technology</option>
+               <option value = "Mechanical">Mechanical Engineering</option>
+               <option value = "Metallurgy">Metallurgy &amp; Materials Engineering</option>
+               <option value = "Production">Production Engineering</option>
+               <option value = "Civil Int.MTech">Civil Engineering&#40;Int. M.Tech&#41;</option>
+               <option value = "Electrical Int.MTech">Electrical Engineering&#40;Int. M.Tech&#41;</option>
+               <option value = "Int Msc Maths">Mathematics (Int. MSc)</option>
+               <option value = "Int Msc Physics">Physics (Int. MSc)</option>
+               <option value = "Int Msc Chemistry">Chemistry (Int. MSc)</option>
+        </select>
+      </fieldset>
+
+      <fieldset class="pure-group">
+        <label for="color">Registration No.: </label>
+        <input type="number" id="color" name="regdno" required placeholder="VSSUT registration number" />
+      </fieldset>
+
+      <fieldset class="pure-group honeypot-field">
+        <label for="honeypot">To help avoid spam, utilize a Honeypot technique with a hidden text field; must be empty to submit the form! Otherwise, we assume the user is a spam bot.</label>
+        <input id="honeypot" type="text" name="honeypot" value="" />
+      </fieldset>
+
+      <button class="button-success pure-button button-xlarge">
+        <i class="fa fa-paper-plane"></i>&nbsp;Send</button>
+        <br><br>
+    </div>
+
+    <!-- Customise the Thankyou Message People See when they submit the form: -->
+    <div class="thankyou_message" style="display:none;">
+      <h2>Thank you for registering&#33; INNOVIESTA awaits you on 20<sup>th</sup> January,2021 at 6&#58;00 PM&#33;</h2>
+      <h2>For any queries contact&#58;<br>Mobile No.&#58;7064265652<br>gmail&#58;<br><a href="mailto:ideainnovationcell@gmail.com" style="font-size:20px">ideainnovationcell@gmail.com</a></h2>
+    </div>
+
+  </form>
+    </div></div>
+  <!-- Submit the Form to Google Using "AJAX" -->
+  <script data-cfasync="false" src="form-submission-handler.js"></script>
+<!-- END -->
+
+</body>
+</html>
