@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pass Generator</title>
+    <link href="http://fonts.cdnfonts.com/css/lemonmilk" rel="stylesheet">
+                
+    <link rel="stylesheet" href="font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</head>
+<style>
+    .button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.button1 {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  background-color: #f44336;
+}
+
+
+</style>
+
+
+<body>
+    
+ <center>  <h2>Pass Generator</h2> </center>
+ <br>
+ <center><h4>Generate your pass and share among your friends. &#128640; </h4></center>
+ <br>
+ <center><img src="./event-pass (89).png" width="300px" height="200px"></center>
+ 
+ <center id="fhn" style="display: none;"><button class="button"  onclick="window.open('index.html',`self`)">Regenerate</button><br> </center>
+    <div class="container">
+       
+        <div id="ph" style="display: none;">
+        <div class="row" id="photo" >
+           
+            <div class="user_info">
+                <div class="user_img">
+                    <img id="fimg" src="images/github_logo.png">
+                </div>
+                <div class="user_name" >
+                   
+                    <p style="color:#000;"><b  style="font-weight:900;font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;" id="namel"></b> <br>
+                </div>
+
+                <div class="follow">
+                    <div class="item followers_">
+                        <p id="dtc" style="font-weight:900;font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Date</p><br>
+                    </div>
+                </div>
+            </div>
+
+            <!-- displays text on right side -->
+            <div class="repo">
+              
+              
+             
+            </div>
+        </div>
+        </div>
+
+        <center id="bhn" style="display: none;">
+            <p>Please choose your image:</p>
+            <input type="file" id="img"  onchange="encodeImageFileAsURL(this)" class="button1" value="Upload image" >
+            <button class="button" id="foo" onclick="takeshot()">
+                Generate
+                                        </button> </center>
+                                        <center id="loader"><img src="../images/throbber_13.gif" width="100px" height="100px"></center>
+                                
+                                   <br><br>
+
+        
+
+
+        
+        
+        
+
+        
+    </div>
+
+    <!-- author credits -->
+
+    <!-- embed client-side script -->
+    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-database.js"></script>
+    
+  <!-- Template Main JS File -->
+    <script src="../js/config.js"></script>
+    <script>
+firebase.auth().onAuthStateChanged(function(user) {
+ 
+ 
+ if(user){
+console.log(user.email)
+   
+     var cliref = firebase.database().ref('crimecredential/');
+     cliref.orderByChild("email").equalTo(user.email).on("child_added", function(data){
+         
+        var newVoke = data.val();
+        
+         sessionStorage.setItem('certiname',newVoke.name)
+        
+        
+         
+          var today = new Date();
+          var time = new Date();
+          var dd = String(today.getDate()).padStart(2, '0');
+          var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+          var yyyy = today.getFullYear();
+          today = mm + '/' + dd + '/' + yyyy;
+           
+          
+          sessionStorage.setItem('certitime',`${time.getHours()} ${time.getMinutes()}`)
+                     sessionStorage.setItem('certidate',today)
+console.log("scc1")
+                     exec();
+
+         
+     })
+        
+         
+         
+          
+}
+  
+  else{
+    window.open('../index.html','_self');
+  }
+  
+  
+
+
+      
+  });
+
+    </script>
+    <script src="js/dom-to-image/dist/dom-to-image.min.js"></script>
+    <script src="js/file-saver/dist/FileSaver.js"></script>
+  
+    <!-- Facebook SKD -->
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v8.0"
+        nonce="qrh32Ait"></script>
+          
+        <script type="text/javascript">
+
+            // Define the function
+            // to screenshot the div
+            function exec(){
+
+document.getElementById("namel").textContent=sessionStorage.getItem('certiname')
+document.getElementById("dtc").textContent=`${sessionStorage.getItem('certidate')} ${sessionStorage.getItem('certitime')} `
+console.log("scc2")           
+now();
+}
+          
+    
+   
+   function now(){
+    console.log("scc3")
+    document.getElementById("loader").style.display="none"
+          document.getElementById("bhn").style.display=`block`;
+   }
+
+   var node = document.getElementById('photo');
+    var btn = document.getElementById('foo');
+    
+    btn.onclick = function() {
+        document.getElementById('ph').style.display="block"
+      
+        domtoimage.toJpeg(document.getElementById('photo'), { quality: 0.95 })
+    .then(function (dataUrl) {
+        var link = document.createElement('a');
+        link.download = 'event-pass.jpeg';
+        link.href = dataUrl;
+        link.click();
+        document.getElementById("bhn").style.display="none"
+           document.getElementById("fhn").style.display="block"
+    });
+
+        
+    }
+        </script>
+                                       <script>
+                                          function encodeImageFileAsURL(element) {
+      var file = element.files[0];
+      var reader = new FileReader();
+      reader.onloadend = function() {
+        console.log('RESULT', reader.result);
+          imageURI = reader.result;
+          document.getElementById('fimg').src=imageURI
+      }
+      reader.readAsDataURL(file);
+    }
+                                         
+                                       </script>
+</body>
+
+</html>

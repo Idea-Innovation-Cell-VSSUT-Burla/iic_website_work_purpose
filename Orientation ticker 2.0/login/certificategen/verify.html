@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificate for Range Of Rocketry</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="favicon" href="favicon.ico">
+    <link href="https://fonts.cdnfonts.com/css/lemonmilk" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+</head>
+
+<body style="background-color:aliceblue;font-family: 'Lemon/Milk', sans-serif;">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><img src="assigno.png" width="50px" class="img-fluid"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"></a>
+              </li>
+            </ul>
+            <span class="navbar-text">
+            <a class="btn btn-primary" href="#"> <b> Dashboard</b></a>
+            </span>
+          </div>
+        </div>
+      </nav>
+   
+    <main >
+<div class="container" id="loader">
+  <br>
+ <center> <img src="../images/throbber_13.gif" width="100px" height="100px"> </center>
+</div>
+
+<div class="container" id="check" style="display: none;">
+ <div class="row">
+     <div class="col-md-9">
+<br><br>
+    <img src="cert.png" width="700px" height="500px" class="img-fluid">  
+</div> 
+<div class="col-md-3">
+
+
+<br><br>
+<center><h5 id="pname"></h5><br><p style="color: #72849a; line-height: 1.8;
+ margin-bottom: 10px;font-weight: 200;">Has attended the <b>Range Over Rocketry webinar</b>.</p><br>
+ <button class="btn btn-success" id="submitBtn">Get Certificate <img src="down.png" width="30px" height="30px"></button></center>
+ <br><br>
+ <img src="4_smart_reinforcing-winning-behaviors.gif" class="img-fluid" width="400px" height="400px">
+ <br><br>
+
+</div>
+</div>
+</div>
+
+        
+
+
+    </main>
+    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-firestore.js"></script>
+   
+    
+  <!-- Template Main JS File -->
+    <script src="../js/config.js"></script>
+    <script>
+      const queryString = window.location.search;
+console.log(queryString);
+;
+const uid = queryString.split("?")[1]
+console.log(uid);
+    </script>
+    <script >
+
+ 
+ 
+ 
+   
+     var cliref = firebase.database().ref('crimecredential/');
+     cliref.orderByChild("uid").equalTo(uid).on("child_added", function(data){
+         
+        var newVoke = data.val();
+        
+         document.getElementById("pname").textContent=`${newVoke.name}`
+         sessionStorage.setItem('certiname',newVoke.name)
+         exec();
+         function exec(){
+          document.getElementById("loader").style.display="none"
+          document.getElementById("check").style.display=`block`;
+         }
+         
+        
+
+         
+     })
+
+
+
+
+    </script>
+    <script src="https://unpkg.com/pdf-lib@1.4.0"></script>
+    <script src="./FileSaver.js"></script>
+    <script src="https://unpkg.com/@pdf-lib/fontkit@0.0.4"></script>
+    <script src="vv1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+</body>
+
+</html>
