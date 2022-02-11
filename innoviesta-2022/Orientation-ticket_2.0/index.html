@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <title>Certificate Generator</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Certificate Generator</h1>
+        <label>
+            First Name:
+            <input id="fname" type='text' maxlength="14"><br><br><br>
+            <br><br><button><a href="#" id="submit-btn" style="text-decoration: none;">Submit</a></button><br><br>
+            <input type="file" value="Upload" id="imageInput">
+        </label>
+        <br><br>
+        <button>
+        <a href="#" id="download-btn" style="text-decoration: none;">Download</a></button><br><br>
+        <canvas id="canvas" height="1055px" width="2384px"></canvas>
+        <canvas id="canvas2" height="192px" width="174px" ></canvas>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
