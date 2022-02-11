@@ -10,6 +10,51 @@
 </head>
 
 <body>
+  <style>
+    #fname,select{
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+  #nxt,#download,#regenerate,#reset{
+    background-color: black;
+    color: #fff;
+    border-color: black;
+    border-radius: 0.8cm;
+    width: 100px;
+  }
+  #nxt-btn,#download-btn,#regenerate-btn,#reset-btn{
+    color: white;
+    text-decoration: none;
+  }
+  .profile-image-pic{
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+  }
+  body {
+        background-color: rgb(5, 8, 8);
+       }
+  
+  .cardbody-color{
+    background-color: #ebf2fa;
+  }
+  
+  a{
+    text-decoration: none;
+
+  }
+  @font-face{
+font-family:"LemonMilk";
+src:url(lemon-milk.ttf);
+}.box{
+ font-family: "LemonMilk";
+}
+  </style>
     <div class="container">
         <div class="row">
           <div class="col-md-6 offset-md-3">
@@ -26,7 +71,7 @@
                 <div class="row">
                   <div class="col-md-6 offset-md-3" >
                     <br>
-                       <p id="nm" style="font-size: large; font-family: lemon milk;"><b>First Name</b>&nbsp;&nbsp;
+                       <p id="nm" style="font-size: large; font-family: LemonMilk;"><b>First Name</b>&nbsp;&nbsp;
                         <input id="fname" type='text' maxlength="14"></p>
                        <center><br><button id="nxt"><a href="#" id="nxt-btn">Next</a></button><br>
                        <input type="file" value="Upload" id="imageInput" style="display: none;">
@@ -42,47 +87,11 @@
                 <canvas id="canvas" height="1055px" width="2384px" hidden></canvas>
                 <canvas id="canvas2" height="192px" width="174px" hidden></canvas>
 
-            <script src="script.js"></script>
+            
           </div>
         </div>
       </div>
-      <style>
-        #fname,select{
-          width: 100%;
-          padding: 12px 20px;
-          margin: 8px 0;
-          display: inline-block;
-          border: 1px solid #ccc;
-          border-radius: 4px;
-          box-sizing: border-box;
-        }
-      #nxt,#download,#regenerate,#reset{
-        background-color: black;
-        color: #fff;
-        border-color: black;
-        border-radius: 0.8cm;
-        width: 200px;
-      }
-      #nxt-btn,#download-btn,#regenerate-btn,#reset-btn{
-        color: white;
-        text-decoration: none;
-      }
-      .profile-image-pic{
-        height: 200px;
-        width: 200px;
-        object-fit: cover;
-      }
-      body {
-            background-color: rgb(5, 8, 8);
-           }
       
-      .cardbody-color{
-        background-color: #ebf2fa;
-      }
-      
-      a{
-        text-decoration: none;
-
-      }</style>
-
+<script src="script.js"></script>
+</body>
 </html>
