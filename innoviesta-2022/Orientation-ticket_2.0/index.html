@@ -10,6 +10,66 @@
 
 <body>
     <div class="container">
+        <div class="row">
+          <div class="col-md-6 offset-md-3">
+            <h2 class="text-center text-white mt-5">&nbsp; Grab Your Tickets</h2>
+            <div class="text-center mb-5 text-white">For Innoviesta-2022</div>
+            <div class="card my-5">
+    
+              <form class="card-body cardbody-color p-lg-5">
+    
+                <div class="text-center">
+                  <img src="/innoviesta-2022/img/icl3.png" class="img-fluid profile-image-pic img-thumbnail rounded-circle my-3"
+                    width="200px" alt="profile">
+                </div>
+    
+                <div class="mb-3">
+                    <label>
+                        <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;First Name:
+                        <input id="fname" type='text' maxlength="14"><br><br><br>
+                        <br><br><button><a href="#" id="submit-btn" style="text-decoration: none;">Submit</a></button><br><br>
+                        <input type="file" value="Upload" id="imageInput">
+                    </label>
+                    <br><br>
+                    <button>
+                    <a href="#" id="download-btn" style="text-decoration: none;">Download</a></button><br><br>
+                    <canvas id="canvas" height="1055px" width="2384px"></canvas>
+                    <canvas id="canvas2" height="192px" width="174px" ></canvas>
+                </div>
+                <script src="script.js"></script>
+              </form>
+            </div>
+    
+          </div>
+        </div>
+      </div>
+      <style>
+      .btn-color{
+        background-color: #0e1c36;
+        color: #fff;
+        
+      }
+      
+      .profile-image-pic{
+        height: 200px;
+        width: 200px;
+        object-fit: cover;
+      }
+      body {
+            background-color: rgb(5, 8, 8);
+           }
+      
+      .cardbody-color{
+        background-color: #ebf2fa;
+      }
+      
+      a{
+        text-decoration: none;
+      }</style>
+
+
+    <div class="container">
         <h1>Certificate Generator</h1>
         <label>
             First Name:
