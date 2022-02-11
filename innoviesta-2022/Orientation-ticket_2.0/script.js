@@ -100,6 +100,7 @@ upimg.addEventListener('change',(e)=>{
 		
 	}
     upimg.style.display="none";
+    document.getElementById('pho').style.display='none';
     document.getElementById('download').style.display="block";
 });
 
@@ -114,6 +115,7 @@ downloadBtn.addEventListener('click', function () {
 
 nxt.addEventListener('click',()=>{
     document.getElementById('imageInput').style.display="block";
+    document.getElementById('pho').style.display="block";
     document.getElementById('nm').style.display="none";
     document.getElementById('fname').style.display="none";
     document.getElementById('nxt').style.display="none";
