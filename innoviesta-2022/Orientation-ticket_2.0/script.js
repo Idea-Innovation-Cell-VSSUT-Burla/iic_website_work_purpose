@@ -56,7 +56,7 @@ function drawImage(){
 function drawImage1() {
 	// ctx.clearRect(0, 0, canvas.width, canvas.height)
 	
-	ctx.font = '60px lemon milk'
+	ctx.font = '60px LemonMilk'
 	ctx.fillStyle = '#FFFFFF'
 	// ctx.fillText(nameInput1.value, 1630, 750)
 	drawCenteredText(nameInput1.value,1925,700);
