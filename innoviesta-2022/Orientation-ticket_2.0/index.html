@@ -14,44 +14,59 @@
         <div class="row">
           <div class="col-md-6 offset-md-3">
             <h2 class="text-center text-white mt-5">&nbsp; Grab Your Tickets</h2>
-            <div class="text-center mb-5 text-white">For Innoviesta-2022</div>
+            <center><div class="text-center mb-5 text-white">&nbsp;&nbsp;&nbsp;&nbsp;Innoviesta-2022</div></center>
             <div class="card my-5">
     
-              <form class="card-body cardbody-color p-lg-5">
+              
     
-                <div class="text-center">
-                  <img src="/innoviesta-2022/img/icl3.png" class="img-fluid profile-image-pic img-thumbnail rounded-circle my-3"
-                    width="200px" alt="profile">
+                <div class="text-center" >
+                  <a href="../../index.html"><img src="/innoviesta-2022/img/icl3.png" class="img-fluid profile-image-pic img-thumbnail rounded-circle my-3"
+                    width="200px" alt="profile"></a>
                 </div>
-    
-                <div class="mb-3">
-                    <label>
-                        <br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;First Name:
-                        <input id="fname" type='text' maxlength="14"><br><br><br>
-                        <br><br><button><a href="#" id="submit-btn" style="text-decoration: none;">Submit</a></button><br><br>
-                        <input type="file" value="Upload" id="imageInput">
-                    </label>
-                    <br><br>
-                    <button>
-                    <a href="#" id="download-btn" style="text-decoration: none;">Download</a></button><br><br>
-                    <canvas id="canvas" height="1055px" width="2384px"></canvas>
-                    <canvas id="canvas2" height="192px" width="174px" ></canvas>
+                <div class="row">
+                  <div class="col-md-6 offset-md-3" style="padding-left: 00px;padding-right: 00px;">
+                    <br>
+                       <p id="nm" style="font-size: large; font-family: lemon milk;">First Name &nbsp;&nbsp;
+                        <input id="fname" type='text' maxlength="14"></p>
+                       <center><br><button id="nxt"><a href="#" id="nxt-btn">Next</a></button><br>
+                       <input type="file" value="Upload" id="imageInput" style="display: none;">
+                       <div class="mb-3"><button id="download" style="display: none;">
+                        <a href="#" id="download-btn" style="text-decoration: none;">Download</a></button><br>
+                        <button id="reset"><a href="#" id="reset-btn" style="text-decoration: none;">Reset</a></button><br>
+                        <button id="regenerate" style="display: none;"><a href="#" id="regenerate-btn" style="text-decoration: none;">Regenerate</a></button></div></center><br>
+                       
+               </div>
+             </div>
+             <canvas id="canvas" height="1055px" width="2384px" hidden></canvas>
+                   <canvas id="canvas2" height="192px" width="174px" hidden></canvas>
                 </div>
-                <script src="script.js"></script>
-              </form>
-            </div>
-    
+               
+
+            <script src="script.js"></script>
           </div>
         </div>
       </div>
       <style>
-      .btn-color{
-        background-color: #0e1c36;
+        #fname{
+          width: 100%;
+          padding: 12px 20px;
+          margin: 8px 0;
+          display: inline-block;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          box-sizing: border-box;
+        }
+      #nxt,#download,#regenerate,#reset{
+        background-color: black;
         color: #fff;
-        
+        border-color: black;
+        border-radius: 0.8cm;
+        width: 200px;
       }
-      
+      #nxt-btn,#download-btn,#regenerate-btn,#reset-btn{
+        color: white;
+        text-decoration: none;
+      }
       .profile-image-pic{
         height: 200px;
         width: 200px;
@@ -67,7 +82,7 @@
       
       a{
         text-decoration: none;
-      }
-      </style>
+
+      }</style>
 
 </html>

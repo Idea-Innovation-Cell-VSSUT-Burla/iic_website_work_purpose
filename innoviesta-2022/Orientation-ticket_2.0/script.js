@@ -8,7 +8,9 @@ const nameInput1 = document.getElementById('fname')
 const nameInput2 = document.getElementById('lname')
 const downloadBtn = document.getElementById('download-btn')
 const upimg = document.getElementById('imageInput')
-
+const nxt=document.getElementById('nxt-btn')
+const reset=document.getElementById('reset-btn')
+const regenerate=document.getElementById('regenerate-btn')
 const image = new Image()
 image.src = 'certificate.png'
 
@@ -62,10 +64,10 @@ function drawImage1() {
 
 
 
-nameInput1.addEventListener('change', function () {
-	drawImage1();
+// nameInput1.addEventListener('change', function () {
+// 	drawImage1();
 
-})
+// })
 
 
 
@@ -97,14 +99,34 @@ upimg.addEventListener('change',(e)=>{
 		}
 		
 	}
+    upimg.style.display="none";
+    document.getElementById('download').style.display="block";
 });
 
 downloadBtn.addEventListener('click', function () {
 	// ctx.drawImage(imgData,600,250)
 	downloadBtn.href = canvas.toDataURL('image/png')
 	downloadBtn.download = 'Orientation ticket'
+    document.getElementById('download').style.display="none";
+    document.getElementById('reset').style.display="none";
+    document.getElementById('regenerate').style.display="block";
 });
 
+nxt.addEventListener('click',()=>{
+    document.getElementById('imageInput').style.display="block";
+    document.getElementById('nm').style.display="none";
+    document.getElementById('fname').style.display="none";
+    document.getElementById('nxt').style.display="none";
+    document.getElementById('fname-dec').style.display="none";
+    drawImage1();
+})
+
+reset.addEventListener('click',()=>{
+    window.location.reload();
+})
+regenerate.addEventListener('click',()=>{
+    window.location.reload();
+})
 
 // var thumbImg = document.createElement('img');
 
@@ -137,4 +159,7 @@ function handleImage(e){
         img.src = event.target.result;
     }
     reader.readAsDataURL(e.target.files[0]);     
+}
+function next(){
+    
 }
