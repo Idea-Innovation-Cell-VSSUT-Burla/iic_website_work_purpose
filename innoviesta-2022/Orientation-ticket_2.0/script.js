@@ -117,7 +117,6 @@ nxt.addEventListener('click',()=>{
     document.getElementById('nm').style.display="none";
     document.getElementById('fname').style.display="none";
     document.getElementById('nxt').style.display="none";
-    document.getElementById('fname-dec').style.display="none";
     drawImage1();
 })
 
