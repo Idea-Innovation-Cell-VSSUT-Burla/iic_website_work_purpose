@@ -763,7 +763,7 @@ section {
 # Cta
 --------------------------------------------------------------*/
 .cta {
-  background: linear-gradient(rgba(8, 8, 8, 0.9), rgba(0, 0, 0, 0.9)), url("../img/cta-bg.jpg") fixed center center;
+  background: linear-gradient(rgba(8, 8, 8, 0.671), rgba(0, 0, 0, 0.678)), url("../../../images/icons/icon-512x512.png") fixed center center;
   background-size: cover;
   padding: 120px 0;
 }
