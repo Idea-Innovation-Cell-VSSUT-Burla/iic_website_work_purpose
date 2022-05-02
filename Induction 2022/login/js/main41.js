@@ -63,10 +63,10 @@ document.querySelector('#btn-signup').onclick = function(){
      var d1 = document.querySelector('#d1');
      var d2 = document.querySelector('#d2');
      var d3 = document.querySelector('#d3');
-     var d4 = document.querySelector('#d4');
-     var d5 = document.querySelector('#d5');
-     var d6 = document.querySelector('#d6');
-     var d7 = document.querySelector('#d7');
+    //  var d4 = document.querySelector('#d4');
+    //  var d5 = document.querySelector('#d5');
+    //  var d6 = document.querySelector('#d6');
+    //  var d7 = document.querySelector('#d7');
     var phone=sessionStorage.getItem("phones")
     var city=sessionStorage.getItem("citys")
     
@@ -90,18 +90,18 @@ document.querySelector('#btn-signup').onclick = function(){
                 if(d3.checked==true){
         domain=`${domain} ${d3.value}, `
         }
-                if(d4.checked==true){
-        domain=`${domain} ${d4.value}, `
-        }
-                if(d5.checked==true){
-        domain=`${domain} ${d5.value}, `
-        }
-                if(d6.checked==true){
-        domain=`${domain} ${d6.value}, `
-        }
-                if(d7.checked==true){
-        domain=`${domain} ${d7.value}, `
-        }
+        //         if(d4.checked==true){
+        // domain=`${domain} ${d4.value}, `
+        // }
+        //         if(d5.checked==true){
+        // domain=`${domain} ${d5.value}, `
+        // }
+        //         if(d6.checked==true){
+        // domain=`${domain} ${d6.value}, `
+        // }
+        //         if(d7.checked==true){
+        // domain=`${domain} ${d7.value}, `
+        // }
         
         db.collection("2022").doc(city).update({ 
             // d0:d0.checked,

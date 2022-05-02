@@ -32,41 +32,154 @@ firebase.auth().onAuthStateChanged(function(user) {
                           document.getElementById("dom").textContent=`${newVoke.domain}`;
                      }
                       document.getElementById("regd").textContent=`${newVoke.regd}`;
+                    //   console.log(typeof(newVoke.sr1));
+                    //   console.log(typeof(newVoke.domain));
+                      let domn=newVoke.domain;
+                      console.log(domn)
+                    //   console.log(domn[0])
+                    //   console.log(newVoke.domain);
+                    //   doma=domn.length;
                       if(newVoke.sr1==1){
+                           console.log("yo");
                           
-                          document.getElementById("msgind").textContent=`You are selected, we congratulate you and wish you luck for the next round. May the force be with you!`;
-                           document.getElementById("selected").style.display=`block`;
-                           if(newVoke.sr2==1){
-                                document.getElementById("msgind").textContent=`You are selected, we congratulate you and wish you luck for the 3rd round. May the force be with you!`;
-                           document.getElementById("selected").style.display=`block`;
-                           if(newVoke.sr3==1){
-                               document.getElementById("msgind").textContent=`You are selected, we congratulate you and wish you luck for the final round. Details will be given to you soon. May the force be with you!`;
-                           document.getElementById("selected").style.display=`block`;
-                           if(newVoke.sr3email==1){
-                               document.getElementById("msgind").textContent=`Congratulations! You have been successfully inducted to Idea Innovation Cell . We heartily welcome you to our tech family and wish that you always keep up the spirit of innovation and brainstorming that brought you to this rostrum. Further details will be notified to you on your registered email id. Stay tuned !!`;
-                           document.getElementById("selected").style.display=`none`;
+                          document.getElementById("msgind").textContent=`“Kudos!" We are pleased to inform you that you have completed the first round of induction and have been selected for the PI Round 1. Once more, congratulations and best wishes for your next adventure! May the force be with you!!`;
+                           //all
+                           if(domn===" CS-Electronics,  Mechanical,  Chemical,  Managment, "){
+                              // document.getElementById("chat1").style.display=`none`;
+                              // document.getElementById("chat2").style.display=`none`;
+                              // document.getElementById("chat3").style.display=`none`;
+                              // document.getElementById("chat4").style.display=`none`;
                            }
-                           if(newVoke.sr3email==0){
-                                document.getElementById("msgind").textContent=`You couldn't make it to the next round, don't feel bad. Life is full of opportunities. Some other occasion will be waiting for you.`;
-                                 document.getElementById("selected").style.display=`none`;
-                           }
-                           }
-                            if(newVoke.sr3==0){
-                                document.getElementById("msgind").textContent=`You couldn't make it to the next round, don't feel bad. Life is full of opportunities. Some other occasion will be waiting for you.`;
-                                 document.getElementById("selected").style.display=`none`;
-                           }
+                           //3
+                           else if(domn===" CS-Electronics,  Mechanical,  Chemical, "){
+                              // document.getElementById("chat1").style.display=`none`;
+                              // document.getElementById("chat2").style.display=`none`;
+                              // document.getElementById("chat3").style.display=`none`;
+                              document.getElementById("chat4").style.display=`none`;
+                         }
+                         else if(domn===" CS-Electronics,  Chemical,  Managment, "){
+                              // document.getElementById("chat1").style.display=`none`;
+                              document.getElementById("chat2").style.display=`none`;
+                              // document.getElementById("chat3").style.display=`none`;
+                              // document.getElementById("chat4").style.display=`none`;
+                         }
+                         else if(domn===" CS-Electronics,  Mechanical,  Managment, "){
+                              // document.getElementById("chat1").style.display=`none`;
+                              // document.getElementById("chat2").style.display=`none`;
+                              document.getElementById("chat3").style.display=`none`;
+                              // document.getElementById("chat4").style.display=`none`;
+                         }
+                         else if(domn===" Mechanical,  Chemical,  Managment, "){
+                              document.getElementById("chat1").style.display=`none`;
+                              // document.getElementById("chat2").style.display=`none`;
+                              // document.getElementById("chat3").style.display=`none`;
+                              // document.getElementById("chat4").style.display=`none`;
+                         }
+                         //2
+                         else if(domn===" CS-Electronics,  Mechanical, "){
+                              // document.getElementById("chat1").style.display=`none`;
+                              // document.getElementById("chat2").style.display=`none`;
+                              document.getElementById("chat3").style.display=`none`;
+                              document.getElementById("chat4").style.display=`none`;
+                         }
+                         else if(domn===" CS-Electronics,  Chemical, "){
+                              // document.getElementById("chat1").style.display=`none`;
+                              document.getElementById("chat2").style.display=`none`;
+                              // document.getElementById("chat3").style.display=`none`;
+                              document.getElementById("chat4").style.display=`none`;
+                         }
+                         else if(domn===" CS-Electronics,  Managment, "){
+                              // document.getElementById("chat1").style.display=`none`;
+                              document.getElementById("chat2").style.display=`none`;
+                              document.getElementById("chat3").style.display=`none`;
+                              // document.getElementById("chat4").style.display=`none`;
+                         }
+                         else if(domn===" Mechanical,  Chemical, "){
+                              document.getElementById("chat1").style.display=`none`;
+                              // document.getElementById("chat2").style.display=`none`;
+                              // document.getElementById("chat3").style.display=`none`;
+                              document.getElementById("chat4").style.display=`none`;
+                         }
+                         else if(domn===" Mechanical,  Managment, "){
+                              document.getElementById("chat1").style.display=`none`;
+                              // document.getElementById("chat2").style.display=`none`;
+                              document.getElementById("chat3").style.display=`none`;
+                              // document.getElementById("chat4").style.display=`none`;
+                         }
+                         else if(domn===" Chemical, Managment, "){
+                              document.getElementById("chat1").style.display=`none`;
+                              document.getElementById("chat2").style.display=`none`;
+                              // document.getElementById("chat3").style.display=`none`;
+                              // document.getElementById("chat4").style.display=`none`;
+                         }
+                         //1
+                         else if(domn===" CS-Electronics, "){
+                              // document.getElementById("chat1").style.display=`none`;
+                              document.getElementById("chat2").style.display=`none`;
+                              document.getElementById("chat3").style.display=`none`;
+                              document.getElementById("chat4").style.display=`none`;
+                         }
+                         else if(domn===" Mechanical, "){
+                              document.getElementById("chat1").style.display=`none`;
+                              // document.getElementById("chat2").style.display=`none`;
+                              document.getElementById("chat3").style.display=`none`;
+                              document.getElementById("chat4").style.display=`none`;
+                         }
+                         else if(domn===" Chemical, "){
+                              document.getElementById("chat1").style.display=`none`;
+                              document.getElementById("chat2").style.display=`none`;
+                              // document.getElementById("chat3").style.display=`none`;
+                              document.getElementById("chat4").style.display=`none`;
+                         }
+                         else if(domn===" Managment, "){
+                              document.getElementById("chat1").style.display=`none`;
+                              document.getElementById("chat2").style.display=`none`;
+                              document.getElementById("chat3").style.display=`none`;
+                              // document.getElementById("chat4").style.display=`none`;
+                         }
+                         else{
+                              document.getElementById("chat1").style.display=`none`;
+                              document.getElementById("chat2").style.display=`none`;
+                              document.getElementById("chat3").style.display=`none`;
+                              document.getElementById("chat4").style.display=`none`;
+                         }
+                         
+
+                         //   if(newVoke.sr2==1){
+                         //        document.getElementById("msgind").textContent=`You are selected, we congratulate you and wish you luck for the 3rd round. May the force be with you!`;
+                         //   document.getElementById("selected").style.display=`block`;
+                         //   if(newVoke.sr3==1){
+                         //       document.getElementById("msgind").textContent=`You are selected, we congratulate you and wish you luck for the final round. Details will be given to you soon. May the force be with you!`;
+                         //   document.getElementById("selected").style.display=`block`;
+                         //   if(newVoke.sr3email==1){
+                         //       document.getElementById("msgind").textContent=`Congratulations! You have been successfully inducted to Idea Innovation Cell . We heartily welcome you to our tech family and wish that you always keep up the spirit of innovation and brainstorming that brought you to this rostrum. Further details will be notified to you on your registered email id. Stay tuned !!`;
+                         //   document.getElementById("selected").style.display=`none`;
+                         //   }
+                         //   if(newVoke.sr3email==0){
+                         //        document.getElementById("msgind").textContent=`You couldn't make it to the next round, don't feel bad. Life is full of opportunities. Some other occasion will be waiting for you.`;
+                         //         document.getElementById("selected").style.display=`none`;
+                         //   }
+                         //   }
+                         //    if(newVoke.sr3==0){
+                         //        document.getElementById("msgind").textContent=`You couldn't make it to the next round, don't feel bad. Life is full of opportunities. Some other occasion will be waiting for you.`;
+                         //         document.getElementById("selected").style.display=`none`;
+                         //   }
                            
-                           }
-                           if(newVoke.sr2==0){
-                                document.getElementById("msgind").textContent=`You couldn't make it to the next round, don't feel bad. Life is full of opportunities. Some other occasion will be waiting for you.`;
-                                 document.getElementById("selected").style.display=`none`;
-                           }
+                         //   }
+                         //   if(newVoke.sr2==0){
+                         //        document.getElementById("msgind").textContent=`You couldn't make it to the next round, don't feel bad. Life is full of opportunities. Some other occasion will be waiting for you.`;
+                         //         document.getElementById("selected").style.display=`none`;
+                         //   }
                            
                           
                       }
                       else{
+                           console.log("hmm")
                           document.getElementById("msgind").textContent=`You couldn't make it to the next round, don't feel bad. Life is full of opportunities. Some other occasion will be waiting for you.`;
                            document.getElementById("newu").style.display=`none`;
+                           document.getElementById("Inducted1").style.display=`none`;
+                           document.getElementById("Inducted2").style.display=`none`;
+
                       }
                     //   if(newVoke.sr1email==1){
                     //        document.getElementById("cnf12").textContent=`Your response is submitted successfully. `;

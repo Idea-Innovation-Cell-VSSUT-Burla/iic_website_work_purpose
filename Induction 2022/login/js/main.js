@@ -133,6 +133,5 @@ firebase.auth().onAuthStateChanged(function (user) {
 
     else {
         console.log("no");
-        window.open("signup.html")
     }
 });
