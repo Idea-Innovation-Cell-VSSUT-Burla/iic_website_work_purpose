@@ -229,7 +229,7 @@ firebase.auth().onAuthStateChanged(function(user) {
                               document.getElementById("selected").style.display=`block`;
                           }
                            if(newVoke.sr3email==2){
-                              document.getElementById("msgind").textContent=`You have been kept on standby in - "CS-ELECRONICS Domain" . So a training session has been scheduled for everyone in IIC for some duration! So stay tuned with the training session. You will have your final PI after the training session. Further Informations about the trainings you will be informed in the respective groups!`;
+                              document.getElementById("msgind").textContent=`You have been kept on standby in - "CS-ELECTRONICS Domain" . So a training session has been scheduled for everyone in IIC for some duration! So stay tuned with the training session. You will have your final PI after the training session. Further Informations about the trainings you will be informed in the respective groups!`;
                               document.getElementById("chat14").style.display=`none`;
                            }
                            if(newVoke.sr3email==0){
