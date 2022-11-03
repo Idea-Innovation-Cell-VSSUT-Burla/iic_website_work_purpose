@@ -128,7 +128,7 @@ cursor=327-(textWidth/2)
   var ty = sessionStorage.getItem("certiname");
   firstPage.drawText(ty, {
     x: cursor,
-    y: 187,
+    y: 180,
     size: textSize,
     font: LemonMilkfont,
     color: rgb(1,1,1),
