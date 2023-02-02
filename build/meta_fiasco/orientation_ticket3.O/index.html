@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <title>Innoviesta-2022 Tickets</title>
+    <link rel="shortcut icon" href="https://iic-vssut.org/assets/img/iclnews.png">
+</head>
+
+<body>
+  <style>
+    #fname,select{
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+  #nxt,#download,#regenerate,#reset{
+    background-color: black;
+    color: #fff;
+    border-color: black;
+    border-radius: 0.8cm;
+    width: 100px;
+  }
+  #nxt-btn,#download-btn,#regenerate-btn,#reset-btn{
+    color: white;
+    text-decoration: none;
+  }
+  .profile-image-pic{
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+  }
+  body {
+        background-color: rgb(5, 8, 8);
+       }
+  
+  .cardbody-color{
+    background-color: #ebf2fa;
+  }
+  
+  a{
+    text-decoration: none;
+
+  }
+  @font-face{
+font-family:"LemonMilk";
+src:url(lemon-milk.ttf);
+}.box{
+ font-family: "LemonMilk";
+}
+  </style>
+    <div class="container">
+        <div class="row">
+          <div class="col-md-6 offset-md-3">
+            <h2 class="text-center text-white mt-5">&nbsp; Grab Your Tickets</h2>
+            <center><div class="text-center mb-5 text-white">&nbsp;&nbsp;&nbsp;&nbsp;Meta Fiasco-2023</div></center>
+            <div class="card my-5">
+    
+              
+    
+                <div class="text-center" >
+                  <a href="../../index.html"><img src="../img/icl3.png" class="img-fluid profile-image-pic img-thumbnail rounded-circle my-3"
+                    width="200px" alt="profile"></a>
+                </div>
+                <div class="row">
+                  <div class="col-md-6 offset-md-3" >
+                    <br>
+                       <p id="nm" style="font-size: large; font-family: LemonMilk;"><b>First Name</b>&nbsp;&nbsp;
+                        <input id="fname" type='text' maxlength="14"></p>
+                       <center><br><button id="nxt"><a href="#" id="nxt-btn">Next</a></button><br>
+                        <p id="pho" style="font-size: large; font-family: LemonMilk; display: none;">Upload Your Photo</p>
+                       <input type="file" value="Upload" id="imageInput" style="display: none;">
+                       <div class="mb-3"><button id="download" style="display: none;">
+                        <a href="#" id="download-btn" style="text-decoration: none;">Download</a></button><br>
+                        <button id="reset"><a href="#" id="reset-btn" style="text-decoration: none;">Reset</a></button><br>
+                        <button id="regenerate" style="display: none;"><a href="#" id="regenerate-btn" style="text-decoration: none;">Regenerate</a></button></div></center><br>
+                       
+               </div>
+             </div>
+             
+                </div>
+                <canvas id="canvas" height="1055px" width="2384px" hidden></canvas>
+                <canvas id="canvas2" height="192px" width="174px" hidden></canvas>
+
+            
+          </div>
+        </div>
+      </div>
+      
+<script src="script.js"></script>
+</body>
+</html>

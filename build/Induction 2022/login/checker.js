@@ -1,4 +1,5 @@
 var config = {
+<<<<<<< HEAD
     apiKey: "AIzaSyAe5Cf1wETRYBs3Yn8C5DZIqxNTq_BAIVk",
     authDomain: "induction-2022.firebaseapp.com",
     databaseURL: "https://induction-2022-default-rtdb.asia-southeast1.firebasedatabase.app",
@@ -8,11 +9,24 @@ var config = {
     appId: "1:176967591803:web:a84073f145b8526709bfde",
     measurementId: "G-521Y3JZNJD"
  
+=======
+    apiKey: "AIzaSyCNQ2dVE0kjJR6DSzKntRpAihvYF5c3jbk",
+    authDomain: "iic-vssut-website.firebaseapp.com",
+    databaseURL: "https://iic-vssut-website-default-rtdb.firebaseio.com",
+    projectId: "iic-vssut-website",
+    storageBucket: "iic-vssut-website.appspot.com",
+    messagingSenderId: "778676985738",
+    appId: "1:778676985738:web:f4a1b8006fc91c4436f273",
+    measurementId: "G-83SZ7TTSG7"
+>>>>>>> ac2b977 (meta-fiaso)
   };
      firebase.initializeApp(config);
     console.log(firebase);
 firebase.auth().onAuthStateChanged(function(user) {
+<<<<<<< HEAD
  
+=======
+>>>>>>> ac2b977 (meta-fiaso)
  db=firebase.firestore();
    if(user){
        var user = firebase.auth().currentUser;
@@ -22,7 +36,10 @@ firebase.auth().onAuthStateChanged(function(user) {
        user.sendEmailVerification().then(function() {
             
    var emailVerified = user.emailVerified;
+<<<<<<< HEAD
 
+=======
+>>>>>>> ac2b977 (meta-fiaso)
         
         window.open('verify-email.html','_self');
            
@@ -41,8 +58,12 @@ firebase.auth().onAuthStateChanged(function(user) {
             }
           });
             
+<<<<<<< HEAD
         
  
+=======
+      
+>>>>>>> ac2b977 (meta-fiaso)
     } );
    }
     else{
