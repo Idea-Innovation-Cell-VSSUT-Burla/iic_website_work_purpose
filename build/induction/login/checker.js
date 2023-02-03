@@ -1,12 +1,12 @@
 var config = {
-   apiKey: "AIzaSyDXQixVgedAZmg8uFHlbVK5LaZiqghf7tw",
-  authDomain: "friendlychat-55f4c.firebaseapp.com",
-  databaseURL: "https://friendlychat-55f4c.firebaseio.com",
-  projectId: "friendlychat-55f4c",
-  storageBucket: "friendlychat-55f4c.appspot.com",
-  messagingSenderId: "1061156891120",
-  appId: "1:1061156891120:web:f884b1e126b62cbf7e5535",
-  measurementId: "G-EZSBC50K62"
+    apiKey: "AIzaSyCNQ2dVE0kjJR6DSzKntRpAihvYF5c3jbk",
+    authDomain: "iic-vssut-website.firebaseapp.com",
+    databaseURL: "https://iic-vssut-website-default-rtdb.firebaseio.com",
+    projectId: "iic-vssut-website",
+    storageBucket: "iic-vssut-website.appspot.com",
+    messagingSenderId: "778676985738",
+    appId: "1:778676985738:web:f4a1b8006fc91c4436f273",
+    measurementId: "G-83SZ7TTSG7"
  
   };
      firebase.initializeApp(config);
@@ -47,3 +47,4 @@ firebase.auth().onAuthStateChanged(function(user) {
     window.open('index1.html','_self');
     }
 });
+

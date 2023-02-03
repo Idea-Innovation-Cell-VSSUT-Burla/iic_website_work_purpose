@@ -25,6 +25,7 @@ firebase.auth().onAuthStateChanged(function(user) {
            
     
 }).catch(function(error) {
+    console.log(error);
   // An error happened.
 });
            }

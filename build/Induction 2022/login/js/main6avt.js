@@ -32,7 +32,7 @@ firebase.auth().onAuthStateChanged(function(user) {
               if(newVoke.sr1email==1){
                    document.getElementById("cnf12").innerHtml=`Your test status is <span class="label label-success">Submitted</span>`;
               }
-              else(){
+              else{
                    document.getElementById("cnf12").innerHtml=` Your test status is <span class="label label-primary">Not submitted</span>`;
               }
               

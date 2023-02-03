@@ -2,14 +2,14 @@ importScripts('https://www.gstatic.com/firebasejs/4.3.0/firebase-app.js');
 importScripts('firebase-messaging.js');
 
 var config = {
-apiKey: "AIzaSyCFXQqvJGGpcNeSittYro6zy5e03itmDLg",
-  authDomain: "ideainnovationcell.firebaseapp.com",
-  databaseURL: "https://ideainnovationcell.firebaseio.com",
-  projectId: "ideainnovationcell",
-  storageBucket: "ideainnovationcell.appspot.com",
-  messagingSenderId: "368936158980",
-  appId: "1:368936158980:web:14751bb19594425bfcb251",
-  measurementId: "G-4E9R4VDDRL"
+  apiKey: "AIzaSyCNQ2dVE0kjJR6DSzKntRpAihvYF5c3jbk",
+  authDomain: "iic-vssut-website.firebaseapp.com",
+  databaseURL: "https://iic-vssut-website-default-rtdb.firebaseio.com",
+  projectId: "iic-vssut-website",
+  storageBucket: "iic-vssut-website.appspot.com",
+  messagingSenderId: "778676985738",
+  appId: "1:778676985738:web:f4a1b8006fc91c4436f273",
+  measurementId: "G-83SZ7TTSG7"
 };
 firebase.initializeApp(config);
 
