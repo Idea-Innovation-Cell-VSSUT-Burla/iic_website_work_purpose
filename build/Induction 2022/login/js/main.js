@@ -111,6 +111,7 @@ firebase.auth().onAuthStateChanged(function (user) {
             });
         }
         else {
+            console.log(db.collection("2022"));
             db.collection("2022").where("email", "==", user.email).get().then((snapshort) => {
                 snapshort.docs.forEach(doc =>{
                     if (doc.data()) {
