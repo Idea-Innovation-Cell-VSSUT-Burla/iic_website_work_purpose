@@ -496,7 +496,7 @@ header h2 {
 }
 
 /*======================================================= media queries ======================== */
-@media screen and (min-width:1500px) {
+@media screen and (min-width:1750px) {
     .btn {
         font-size: 1.5rem;
         padding: 1.1rem 2.2rem;
