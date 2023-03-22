@@ -67,7 +67,9 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-animation: animate-preloader 1s linear infinite;
   animation: animate-preloader 1s linear infinite
 }
-
+.images-grid{
+  background-color: red;
+}
 @-webkit-keyframes animate-preloader {
   0% {
     transform: rotate(0)

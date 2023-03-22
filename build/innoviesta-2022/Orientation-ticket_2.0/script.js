@@ -12,11 +12,7 @@ const nxt=document.getElementById('nxt-btn')
 const reset=document.getElementById('reset-btn')
 const regenerate=document.getElementById('regenerate-btn')
 const image = new Image()
-<<<<<<< HEAD
-image.src = 'certificate.png'
-=======
 image.src = 'meta_fiasco.jpg';
->>>>>>> ac2b977 (meta-fiaso)
 
 
     // Testing
