@@ -119,7 +119,15 @@ header h2 {
 
 /*===================================================== hero section =================  */
 .hero-section {
-    height: 100vh;
+    height: 80vh;
+    overflow-x: hidden;
+    justify-content: center;
+    background-color: #1a1a19;
+    margin-bottom: 0px;
+}
+
+.video-section {
+    height: fit-content;
     overflow-x: hidden;
     justify-content: center;
     background-color: #1a1a19;
@@ -166,7 +174,8 @@ header h2 {
 
 .hero-section-btns {
     margin-top: 2rem;
-
+    /* align-items: center; */
+    /* justify-content: center; */
     gap: 1rem;
 }
 
@@ -193,7 +202,21 @@ header h2 {
     gap: 0.4rem;
 }
 
+.btn-watch-video2 {
+    font-size: 1rem;
+    color: var(--white);
+    background-color: transparent;
+    gap: 0.4rem;
+
+    border-style: solid;
+    border-radius: 2px;
+}
+
 .btn-watch-video:hover {
+    color: #ffad00;
+}
+
+.btn-watch-video2:hover {
     color: #ffad00;
 }
 
@@ -220,7 +243,23 @@ header h2 {
     z-index: 99999;
 }
 
+.video-popup2 ,.signIn-popup{
+    display: none;
+    position: fixed;
+    width: 95vw;
+    height: 90vh;
+    background-color: #061309de;
+    margin: 2rem;
+    justify-content: center;
+    z-index: 99999;
+}
+
 .video-popup video, .video-popup .video-iframe {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+}
+.video-popup2 video, .video-popup2 .video-iframe {
     width: 100%;
     height: 100%;
     justify-content: center;
@@ -245,11 +284,19 @@ header h2 {
 .about-section {
     display: flex;
     align-items: center;
-    justify-content: center;
+   justify-content: center;
     padding: 3rem;
     height: 80vh;
     background: linear-gradient(to right, #f7eb0e, #ff9700);
-}
+} 
+
+.video-section {
+    display: flex;
+    align-items: center;
+   justify-content: center;
+    padding: 3rem;
+    /* height: 80vh; */
+} 
 
 .about-section-card {
     flex-direction: column;
@@ -258,9 +305,39 @@ header h2 {
     padding: 4rem;
     text-align: center;
     border-radius: 1rem;
-    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.452);
-    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 5px 5px 20px rgba(32, 32, 32, 0.452);
+    background-color: rgba(249, 249, 249, 0.1);
     backdrop-filter: blur(5px);
+    
+}
+
+/* .about-section-card {
+    flex-direction: column;
+    justify-content: center;
+    width: 60%;
+    margin-top: 2rem;
+    gap: 2rem;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 1rem;
+    box-shadow: 5px 5px 20px rgba(32, 32, 32, 0.452);
+    background-color: rgba(249, 249, 249, 0.53);
+    backdrop-filter: blur(5px);
+} */
+
+.video-section-card {
+    flex-direction: column;
+    justify-content: center;
+    /* width: fit-content; */
+    color: white;
+    gap: 2rem;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 1rem;
+    box-shadow: 5px 5px 20px rgba(202, 193, 193, 0.452);
+    background-color: rgba(249, 249, 249, 0.071);
+    backdrop-filter: blur(5px);
+    
 }
 
 .about-section h2 {
@@ -273,10 +350,27 @@ header h2 {
     display: inline-block;
 }
 
+.video-section h2 {
+    font-size: 1.3rem;
+    border-bottom: 1px solid black;
+    padding: 0.3rem;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    /* width: 30%; */
+    display: inline-block;
+}
+
 .about-section p {
     font-size: 1rem;
     line-height: 1.7rem;
     margin-bottom: 1rem;
+    text-align: justify;
+}
+
+.video-section p {
+    font-size: .9rem;
+    line-height: 1.7rem;
+    margin: .7rem;
     text-align: justify;
 }
 
@@ -292,7 +386,25 @@ header h2 {
     transition: 0.1s ease-out;
 }
 
+.video-section .btn-log-in {
+    padding: 0.8rem 3rem;
+    font-size: 0.93rem;
+    font-weight: bold;
+    cursor: pointer;
+    color: #000;
+    background-color: #ff9700;
+    border: 1.5px solid #000;
+    border-radius: 10rem;
+    transition: 0.1s ease-out;
+}
+
 .about-section .btn-log-in:hover {
+    background-color: #fff;
+    color: #ffAD00;
+    border-color: #FFF;
+}
+
+.video-section .btn-log-in:hover {
     background-color: #fff;
     color: #ffAD00;
     border-color: #FFF;

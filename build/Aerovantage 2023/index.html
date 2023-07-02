@@ -44,6 +44,14 @@
                 <iframe width="560" height="315" src="./teaser.mp4" title="Video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
               </div>
             </div>
+            <div class="video-popup2 d-flex">
+              <span class="mobile-menu-close"><i id="video-popup-close-btn2" class=" ri video-close-icon ri-close-line"></i></span>
+             <!-- <video src="./assets/img/portfolio/"></video> -->
+              <div class="video-iframe d-flex" >
+                <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/Oxi75-pyT50" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
+                <iframe width="560" height="315" src="./Final.mp4" title="Video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              </div>
+            </div>
             <!-- video div -->
 
 <!-- /////////////////////// -->
@@ -57,14 +65,29 @@
                         <p >Be a part of the change!</p>
                       <div class="hero-section-btns d-flex">
                           <button class="btn btn-get-started"><a href="#about">Book a seat</a></button>
-                           <button class="btn btn-watch-video d-flex"><i class=" ri ri-play-circle-line"></i>Watch Video</button>
+                           <button class="btn btn-watch-video d-flex"><i class=" ri ri-play-circle-line"></i>Watch Teaser!</button>
                       </div>
                 </div>
                 <div class="hero-section-img u--bounceInUp"><img class="u--bounceIn " src="./Images/induction-poster.png"  alt="" style="width: 400px;"></div>
             </div>
-         
-         
           </section>
+
+          <section id="hero" class="video-section d-flex">
+            <div class="video-section-card ">
+              <div class="hero-section-btns d-flex" style="justify-content: center;">
+                <button class="btn btn-watch-video2 d-flex"><i class=" ri ri-play-circle-line"></i><h3>Watch Trailer!</h3></button>
+              </div>
+              
+              <div class="video-section-content">
+                <p>
+                  Are you a fan of aerodynamics and drones?? So here is your chance, to dive into your dreams. Gear up your energy and plunge yourselves into the perfect realm where creativity meets reality with amazing webinars curated to augment your proficiency and empower your thoughts to live through your imaginations.
+                </p>
+              </div>
+              
+              <!-- <a  href="./login/index.html" class="btn btn-log-in">Login</a> -->
+            </div>
+          </section>
+
           <section class="about-section d-flex" id="about">
             
             <div class="about-section-card ">
@@ -388,15 +411,24 @@ links.forEach(element => {
   })
   // video popup
   const closeicon = document.getElementById('video-popup-close-btn');
+  const closeicon2 = document.getElementById('video-popup-close-btn2');
   const videoPopUp = document.querySelector('.video-popup');
+  const videoPopUp2 = document.querySelector('.video-popup2');
   const signInPopUp = document.querySelector('.signIn-popup');
   const watchVideo = document.querySelector('.btn-watch-video');
+  const watchVideo2 = document.querySelector('.btn-watch-video2');
   const loginBtn = document.querySelector('.login-btn');
   watchVideo.addEventListener('click',()=>{
     videoPopUp.style.display = "block";
   })
+  watchVideo2.addEventListener('click',()=>{
+    videoPopUp2.style.display = "block";
+  })
   closeicon.addEventListener('click',()=>{
     videoPopUp.style.display = "none";
+  })
+  closeicon2.addEventListener('click',()=>{
+    videoPopUp2.style.display = "none";
   })
   loginBtn.addEventListener('click',()=>{
     signInPopUp.style.display = "block";
